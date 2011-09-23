@@ -1,0 +1,20 @@
+<% form_tag({:controller => "survey", :action => "create"}) do %>
+
+  a)<%= radio_button_tag(:question_0, "a") %>
+  b)<%= radio_button_tag(:question_0, "b") %>
+  c)<%= radio_button_tag(:question_0, "c") %>
+
+  <hr/>
+
+  a)<%= radio_button_tag(:question_1, "a") %>
+  b)<%= radio_button_tag(:question_1, "b") %>
+  c)<%= radio_button_tag(:question_1, "c") %>
+
+  <hr/>
+
+  a)<%= radio_button_tag(:question_2, "a") %>
+  b)<%= radio_button_tag(:question_2, "b") %>
+  c)<%= radio_button_tag(:question_2, "c") %>
+
+<%= submit_tag("Enviar")  %>
+<% end %>
