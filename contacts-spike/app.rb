@@ -5,18 +5,20 @@ get '/import' do
   erb :import
 end
 
-post '/import' do
+post '/show_contacts' do
   email_provider = params[:email_provider]
   login = params[:login]
   password = params[:password]
 
   case email_provider
     when "gmail"
-      Contacts::Gmail.new(login, password)
+      @contacts = Contacts::Gmail.new(login, password).contacts
     when "hotmail"
-      Contacts::Hotmail.new(login, password)
+      @contacts = Contacts::Hotmail.new(login, password).contacts
     when "yahoo"
-      Contacts::Yahoo.new(login, password)
+      @contacts = Contacts::Yahoo.new(login, password).contacts
   end
+
+  erb :show_contacts
 
 end
