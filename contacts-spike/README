@@ -1,0 +1,1 @@
+glennfu-contacts depends on gdata which in their default gem is incompatible with ruby 1.9. For this you have to remove the gdata installed by contacts and install an alternative named gdata_19.
