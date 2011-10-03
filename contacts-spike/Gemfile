@@ -3,3 +3,4 @@ source :rubygems
 gem 'sinatra'
 gem 'glennfu-contacts'
 gem 'resque'
+gem 'gdata_19'
