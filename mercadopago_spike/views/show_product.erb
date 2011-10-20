@@ -1,0 +1,26 @@
+<form name="product" action="/product/<%= params[:id] %>/buy" method="post">
+    <img src="/images/coconut.jpg" />
+
+    <input type="hidden" name="product[items[id]]" value="<%= @id %>" />
+    <input type="hidden" name="product[items[title]]" value="<%= @title %>" />
+    <input type="hidden" name="product[items[description]]" value="<%= @description %>" />
+    <input type="hidden" name="product[items[unit_price]]" value="<%= @unit_price %>" />
+    <input type="hidden" name="product[items[currency_id]]" value="<%= @currency_id %>" />
+    <input type="hidden" name="product[items[picture_url]]" value="http://192.168.32.134:4567/images/coconut.jpg" />
+    <input type="hidden" name="product[items[quantity]]" value="<%= @quantity %>" />
+
+    <input type="hidden" name="product[payer[name]]" value="<%= @buyer_name %>" />
+    <input type="hidden" name="product[payer[surname]]" value="<%= @buyer_surname %>" />
+    <input type="hidden" name="product[payer[email]]" value="<%= @buyer_email %>" />
+
+    <input type="hidden" name="product[back_urls[success]]" value="<%= @success_url %>" />
+    <input type="hidden" name="product[back_urls[pending]]" value="<%= @pending_url %>" />
+
+    <input type="hidden" name="product[external_reference]" value="<%= @external_reference %>" />
+
+    <p>Product name: <%= @title %></p>
+    <p>Description: <%= @description %></p>
+    <p>Price per unit: R$ <%= @unit_price %></p>
+    <p>Quantity: <%= @quantity %></p>
+    <p><input type="submit" value="buy" />
+</form>
